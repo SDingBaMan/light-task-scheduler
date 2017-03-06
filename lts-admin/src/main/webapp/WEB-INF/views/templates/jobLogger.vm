@@ -130,9 +130,7 @@
             <td>{{row.cronExpression}}</td>
             <td>{{row.needFeedback | format:'needFeedbackLabel'}}</td>
             <td>{{row.extParams | format:'stringifyJSON'}}</td>
-            <td>
-                <pre>{{row.msg}}</pre>
-            </td>
+            <td>{{row.msg | format:'stringifyHTML'}} {{row.msg | format:'stringifyHTML'}}</td>
         </tr>
         {{/each}}
         {{if results == 0}}
