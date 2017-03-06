@@ -21,6 +21,17 @@ LTS.colFormatter.stringifyJSON = function (v) {
     return v ? JSON.stringify(v) : v;
 };
 
+/**
+ * 过滤html标签
+ * @param v
+ * @returns {string}
+ */
+LTS.colFormatter.stringifyHTML = function (v) {
+    var textHtml = /<[^<>]+>/g;
+    return v ? v.toString().replace(textHtml,''): v;
+};
+
+
 LTS.colFormatter.needFeedbackLabel = function (v) {
     return v ? "需要" : "不需要";
 };
